@@ -13,14 +13,14 @@ public class HiController {
 
     private final HiService hiService;
 
-    @PatchMapping("helloWorld/{hiStr}")
+    @PatchMapping("/helloWorld/{hiStr}")
     public void createHi(
         @PathVariable String hiStr
     ) {
         hiService.createHi(hiStr);
     }
 
-    @GetMapping("helloWorld/{hiStr}")
+    @GetMapping("/helloWorld/{hiStr}")
     public List<Hi> getHi(
         @PathVariable String hiStr
     ) {
